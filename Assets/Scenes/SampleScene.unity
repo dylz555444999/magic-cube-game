@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1910d484667dd4e9e47c9f33aa3887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myRigidBody2d: {fileID: 299715936}
 --- !u!50 &299715936
 Rigidbody2D:
   serializedVersion: 5
@@ -525,7 +526,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1632587351}
   - component: {fileID: 1632587350}
-  - component: {fileID: 1632587349}
   - component: {fileID: 1632587348}
   - component: {fileID: 1632587347}
   m_Layer: 0
@@ -608,18 +608,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1632587349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632587346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e1910d484667dd4e9e47c9f33aa3887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1632587350
 SpriteRenderer:
   m_ObjectHideFlags: 0

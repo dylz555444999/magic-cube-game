@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
+    public Rigidbody2D myRigidBody2d;
+
     int numberOfTimes = 5;
     string nameOfTheKey = "ENTER";
     float speedOfBraking = 6.94f;
@@ -23,17 +25,22 @@ public class Cube : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            print("up arrow key is pressed");
+            myRigidBody2d.linearVelocity = new Vector2(0f, 10f);
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            myRigidBody2d.linearVelocity = new Vector2(10f, 0f);
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            print("down arrow  key is pressed");
+            myRigidBody2d.linearVelocity = new Vector2(0f, -10f);
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            print("spacebar key is pressed");
+            myRigidBody2d.linearVelocity = new Vector2(-10f, 0f);
         }
     }
 }
