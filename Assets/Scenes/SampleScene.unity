@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 299715933}
   - component: {fileID: 299715935}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Magic Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
