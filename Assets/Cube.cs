@@ -11,18 +11,44 @@ public class Cube : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Debug.Log("If you press the up arrow you'll JUMP!");
-       // Debug.Log("If you press the left or right arrow" + " " + numberOfTimes + " " + "you'll MOVE!");
-
-       // Debug.LogWarning("if you press the" + " " +  nameOfTheKey + " " + "nothing happens");
-
-       // Debug.LogError("your speed is" + " " + speedOfBraking);
+        //printingToOurConsole();
     }
 
     // Update is called once per frame
     void Update()
     {
+        movingTheCube();
 
+        checkingCubeBounds();
+    }
+
+    public string PrintingfromOutside(int value)
+    {
+        string printingSomething = "the value we were sent is " + value;
+
+        return printingSomething;
+    }
+
+private void checkingCubeBounds()
+    {
+        if (transform.position.x > 9.5f)
+        {
+            Debug.LogWarning("the cube is out of bounds to the right side!!");
+        }
+
+        else if (transform.position.x < -9.5f)
+        {
+            Debug.LogWarning("the cube is out of bounds to the left side!!");
+        }
+        else if (transform.position.y > 5.5f)
+        {
+            Debug.LogWarning("the cube is out of bounds to the top side!!");
+
+        }
+    }
+
+    private void movingTheCube()
+    {
         if (Input.GetKey(KeyCode.UpArrow))
         {
             myRigidBody2d.linearVelocity = new Vector2(0f, 10f);
@@ -42,20 +68,15 @@ public class Cube : MonoBehaviour
         {
             myRigidBody2d.linearVelocity = new Vector2(-10f, 0f);
         }
+    }
 
-        if (transform.position.x > 9.5f)
-        {
-            Debug.LogWarning("the cube is out of bounds to the right side!!");
-        }
+    private void printingToOurConsole()
+    {
+        Debug.Log("If you press the up arrow you'll JUMP!");
+        Debug.Log("If you press the left or right arrow" + " " + numberOfTimes + " " + "you'll MOVE!");
 
-        else if (transform.position.x < -9.5f)
-        {
-            Debug.LogWarning("the cube is out of bounds to the left side!!");
-        }
-        else if (transform.position.y > 5.5f)
-        {
-            Debug.LogWarning("the cube is out of bounds to the top side!!");
+        Debug.LogWarning("if you press the" + " " + nameOfTheKey + " " + "nothing happens");
 
-        }
+        Debug.LogError("your speed is" + " " + speedOfBraking);
     }
 }
